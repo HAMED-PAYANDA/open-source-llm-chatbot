@@ -143,3 +143,4 @@ Hamed Payanda
 •	GitHub: @HAMED-PAYANDA
 Completed as part of the IBM AI Developer.
 
+📜 License: Distributed under the MIT License. See LICENSE for more information.
