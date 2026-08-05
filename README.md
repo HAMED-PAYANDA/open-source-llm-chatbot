@@ -65,13 +65,9 @@ v
 ## ✨ Key Features
 
 * **Dual Architecture Paradigms**: Demonstrates hands-on knowledge of both Seq2Seq and modern Causal/Decoder-only transformer architectures.
-* 
-* **Hugging Face Chat Templates**: Utilizes standardized formatting (`apply_chat_template`) to manage multi-turn role interactions seamlessly.
-* 
+* **Hugging Face Chat Templates**: Utilizes standardized formatting (`apply_chat_template`) to manage multi-turn role interactions seamlessly. 
 * **Rolling Context Management**: Features automatic window trimming to maintain context within maximum token limits without overflowing model memory.
-* 
-* **CPU-Optimized Inference**: Implements `torch.inference_mode()` with lightweight model variants for rapid execution without needing high-end GPU resources.
-* 
+* **CPU-Optimized Inference**: Implements `torch.inference_mode()` with lightweight model variants for rapid execution without needing high-end GPU resources. 
 * **Hyperparameter Tuning**: Fine-tuned output generation settings including `temperature`, `top_p`, `repetition_penalty`, and `no_repeat_ngram_size` to control creative variance and minimize repetitive text loops.
 
 ---
@@ -91,7 +87,6 @@ v
 ## 📁 Repository Structure
 ```text
 open-source-llm-chatbot/
-│
 ├── .theia/
 │   └── settings.json          # IDE workspace configurations
 ├── .gitignore                 # Specifies intentionally untracked virtual environments
@@ -106,13 +101,14 @@ open-source-llm-chatbot/
 * Python 3.10 or higher installed.
 * `git` CLI tool configured on your machine.
 
-### 1. Clone the Repository
+1. Clone the Repository
 ```bash
 git clone [https://github.com/HAMED-PAYANDA/open-source-llm-chatbot.git](https://github.com/HAMED-PAYANDA/open-source-llm-chatbot.git)
 cd open-source-llm-chatbot
 ```
 2. Create and Activate Virtual Environment
 # Install virtualenv package if needed
+```bash
 pip3 install virtualenv
 
 # Create environment
@@ -123,18 +119,27 @@ virtualenv my_env
 source my_env/bin/activate
 # On Windows Command Prompt:
 # my_env\Scripts\activate.bat
+```
 
 3. Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
 4. Running the Chatbots
+You can choose to run either implementation. To terminate either session, type exit at the command prompt.
 Option A: Run the Modern Causal LLM Engine (Recommended)
+```bash
 python3 chatbot_llm.py
+```
+![Screenshot of the terminal showing the Hugging Face model loading and answering a user prompt](screenshot3.png)
 
 Option B: Run the Legacy Seq2Seq Engine
+```bash
 python3 chatbot.py
-
-To terminate either chatbot session, type exit at the command prompt.
-📜 License
-Distributed under the MIT License. See LICENSE for more information.
+```
+👤 Author
+Hamed Payanda
+•	GitHub: @HAMED-PAYANDA
+Completed as part of the IBM AI Developer.
 
