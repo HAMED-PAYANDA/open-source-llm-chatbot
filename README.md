@@ -1,24 +1,32 @@
-# Open Source LLM Chatbot
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.2.2-ee4c2c?logo=pytorch&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Transformers%204.41.2-FFD21E?logo=huggingface&logoColor=black)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+<div align="center">
 
-A professional-tier implementation of conversational AI agents using open-source Large Language Models (LLMs) and Hugging Face Transformers. This repository demonstrates the evolution of chatbot architectures: transitioning from traditional sequence-to-sequence (Seq2Seq) model implementations to modern causal LLMs utilizing structured chat templates.
+# 🤖 Open Source LLM Chatbot
+
+A professional-tier implementation of conversational AI agents using open-source Large Language Models (LLMs) and Hugging Face Transformers.
+
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-Deep_Learning-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Hugging Face](https://img.shields.io/badge/Hugging_Face-Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/)
+[![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)](#)
+
+</div>
 
 ---
 
 ## 📌 Project Overview
 
-This repository contains two complete conversational AI implementations built with Python and PyTorch:
+This repository demonstrates the evolution of chatbot architectures: transitioning from traditional sequence-to-sequence (Seq2Seq) model implementations to modern causal LLMs utilizing structured chat templates.
 
-1. **Legacy Seq2Seq Engine (`chatbot.py`)**: Uses Facebook's `blenderbot-400M-distill`. Highlights foundational NLP principles including manual prompt formatting, tokenization, sequence-to-sequence generation, detokenization, and state-managed context retention.
-2. **Modern Causal LLM Engine (`chatbot_llm.py`)**: Uses Hugging Face's instruction-tuned `SmolLM2-360M-Instruct`. Implements state-of-the-art Hugging Face **Chat Templates** (`apply_chat_template`), role-based messaging (`system`, `user`, `assistant`), and memory-efficient inference execution (`torch.inference_mode`).
+It contains two complete conversational AI implementations built with Python and PyTorch:
+
+* **Legacy Seq2Seq Engine (`chatbot.py`):** Uses Facebook's `blenderbot-400M-distill`. Highlights foundational NLP principles including manual prompt formatting, tokenization, sequence-to-sequence generation, detokenization, and state-managed context retention.
+* **Modern Causal LLM Engine (`chatbot_llm.py`):** Uses Hugging Face's instruction-tuned `SmolLM2-360M-Instruct`. Implements state-of-the-art Hugging Face Chat Templates (`apply_chat_template`), role-based messaging (system, user, assistant), and memory-efficient inference execution (`torch.inference_mode`).
 
 ---
 
 ## 🏗️ Architecture Flow Diagram
+
 ```text
 +-----------------------------------------------------------------------------------+
 |                               USER INPUT (Terminal)                               |
@@ -27,7 +35,7 @@ This repository contains two complete conversational AI implementations built wi
 v
 +-----------------------------------------------------------------------------------+
 |                            CONVERSATION HISTORY BUFFER                            |
-|     Maintains a rolling context window (e.g., system prompt + last N turns)      |
+|     Maintains a rolling context window (e.g., system prompt + last N turns)       |
 +-----------------------------------------------------------------------------------+
 |
 v
@@ -52,16 +60,18 @@ v
 +-----------------------------------------------------------------------------------+
 |                             BOT RESPONSE (Terminal)                               |
 +-----------------------------------------------------------------------------------+
-
----
 ```
 
 ## ✨ Key Features
 
 * **Dual Architecture Paradigms**: Demonstrates hands-on knowledge of both Seq2Seq and modern Causal/Decoder-only transformer architectures.
+* 
 * **Hugging Face Chat Templates**: Utilizes standardized formatting (`apply_chat_template`) to manage multi-turn role interactions seamlessly.
+* 
 * **Rolling Context Management**: Features automatic window trimming to maintain context within maximum token limits without overflowing model memory.
+* 
 * **CPU-Optimized Inference**: Implements `torch.inference_mode()` with lightweight model variants for rapid execution without needing high-end GPU resources.
+* 
 * **Hyperparameter Tuning**: Fine-tuned output generation settings including `temperature`, `top_p`, `repetition_penalty`, and `no_repeat_ngram_size` to control creative variance and minimize repetitive text loops.
 
 ---
