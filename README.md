@@ -9,7 +9,7 @@ A professional-tier implementation of conversational AI agents using open-source
 [![PyTorch](https://img.shields.io/badge/PyTorch-Deep_Learning-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Hugging Face](https://img.shields.io/badge/Hugging_Face-Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/)
 [![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)](#)
-[![IBM Certification](https://img.shields.io/badge/IBM-AI%20Developer%20Program-blue?style=flat&logo=ibm)](https://cognitiveclass.ai/)
+[![IBM Certification](https://img.shields.io/badge/IBM-AI%20Developer%20Program-blue?style=for-the-badge&logo=ibm)](https://cognitiveclass.ai/)
 
 </div>
 
