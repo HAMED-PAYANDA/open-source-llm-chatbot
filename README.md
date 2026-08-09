@@ -29,38 +29,28 @@ It contains two complete conversational AI implementations built with Python and
 ## 🏗️ Architecture Flow Diagram
 
 ```text
-+-----------------------------------------------------------------------------------+
-|                               USER INPUT (Terminal)                               |
-+-----------------------------------------------------------------------------------+
-|
-v
-+-----------------------------------------------------------------------------------+
-|                            CONVERSATION HISTORY BUFFER                            |
-|     Maintains a rolling context window (e.g., system prompt + last N turns)       |
-+-----------------------------------------------------------------------------------+
-|
-v
-+-----------------------------------------------------------------------------------+
-|                        PROMPT FORMATTING & CHAT TEMPLATE                          |
-|  Translates structured roles into model-specific tokens (AutoTokenizer)           |
-+-----------------------------------------------------------------------------------+
-|
-v
-+-----------------------------------------------------------------------------------+
-|                            MODEL GENERATION (PyTorch)                             |
-|    Inference engine generates response tokens using top-p & temperature sampling  |
-+-----------------------------------------------------------------------------------+
-|
-v
-+-----------------------------------------------------------------------------------+
-|                        DETOKENIZATION & SLICING OUTPUT                            |
-|      Decodes token IDs into human-readable text and appends to state buffer       |
-+-----------------------------------------------------------------------------------+
-|
-v
-+-----------------------------------------------------------------------------------+
-|                             BOT RESPONSE (Terminal)                               |
-+-----------------------------------------------------------------------------------+
+```mermaid
+graph TD
+    User([👤 User Input <br> <i>Terminal</i>]) --> History[(📂 Conversation History Buffer)]
+    
+    History -->|Maintains rolling context window <br> System Prompt + Last N Turns| Template[⚙️ Prompt Formatting & Chat Template]
+    
+    Template -->|Translates structured roles into <br> model-specific tokens via AutoTokenizer| Generation[🧠 Model Generation <br> <i>PyTorch</i>]
+    
+    Generation -->|Inference engine generates response tokens <br> using top-p & temperature sampling| Detokenization[📝 Detokenization & Slicing Output]
+    
+    Detokenization -->|Decodes token IDs & <br> appends to state buffer| History
+    
+    Detokenization --> Bot([🤖 Bot Response <br> <i>Terminal</i>])
+    
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px,color:#000;
+    classDef database fill:#e1f5fe,stroke:#0288d1,stroke-width:2px,color:#000;
+    classDef process fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px,color:#000;
+    classDef io fill:#e8f5e9,stroke:#388e3c,stroke-width:2px,color:#000;
+    
+    class History database;
+    class Template,Generation,Detokenization process;
+    class User,Bot io;
 ```
 
 ## ✨ Key Features
