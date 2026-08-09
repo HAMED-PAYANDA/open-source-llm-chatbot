@@ -10,6 +10,7 @@ A professional-tier implementation of conversational AI agents using open-source
 [![Hugging Face](https://img.shields.io/badge/Hugging_Face-Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/)
 [![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)](#)
 [![IBM Certification](https://img.shields.io/badge/IBM-AI%20Developer%20Program-blue?style=for-the-badge&logo=ibm)](https://cognitiveclass.ai/)
+[![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)](#)
 
 </div>
 
