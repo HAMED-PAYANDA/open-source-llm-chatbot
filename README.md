@@ -28,28 +28,27 @@ It contains two complete conversational AI implementations built with Python and
 
 ## 🏗️ Architecture Flow Diagram
 
+
 ```mermaid
 graph TD
-    User([👤 User Input <br> <i>Terminal</i>]) --> History[(📂 Conversation History Buffer)]
+    User(["👤 User Input (Terminal)"]) --> History[("📂 Conversation History Buffer")]
     
-    History -->|Maintains rolling context window <br> System Prompt + Last N Turns| Template[⚙️ Prompt Formatting & Chat Template]
+    History -->|"Maintains rolling context window (System Prompt + Last N Turns)"| Template["⚙️ Prompt Formatting & Chat Template"]
     
-    Template -->|Translates structured roles into <br> model-specific tokens via AutoTokenizer| Generation[🧠 Model Generation <br> <i>PyTorch</i>]
+    Template -->|"Translates structured roles into model-specific tokens"| Generation["🧠 Model Generation (PyTorch)"]
     
-    Generation -->|Inference engine generates response tokens <br> using top-p & temperature sampling| Detokenization[📝 Detokenization & Slicing Output]
+    Generation -->|"Generates response tokens using top-p & temperature"| Detokenization["📝 Detokenization & Slicing Output"]
     
-    Detokenization -->|Decodes token IDs & <br> appends to state buffer| History
+    Detokenization -->|"Decodes token IDs & appends to state buffer"| History
     
-    Detokenization --> Bot([🤖 Bot Response <br> <i>Terminal</i>])
+    Detokenization --> Bot(["🤖 Bot Response (Terminal)"])
     
-    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px,color:#000;
-    classDef database fill:#e1f5fe,stroke:#0288d1,stroke-width:2px,color:#000;
-    classDef process fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px,color:#000;
-    classDef io fill:#e8f5e9,stroke:#388e3c,stroke-width:2px,color:#000;
-    
-    class History database;
-    class Template,Generation,Detokenization process;
-    class User,Bot io;
+    style User fill:#e8f5e9,stroke:#388e3c,stroke-width:2px,color:#000
+    style History fill:#e1f5fe,stroke:#0288d1,stroke-width:2px,color:#000
+    style Template fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px,color:#000
+    style Generation fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px,color:#000
+    style Detokenization fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px,color:#000
+    style Bot fill:#e8f5e9,stroke:#388e3c,stroke-width:2px,color:#000
 ```
 
 ## ✨ Key Features
