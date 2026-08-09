@@ -28,7 +28,6 @@ It contains two complete conversational AI implementations built with Python and
 
 ## 🏗️ Architecture Flow Diagram
 
-```text
 ```mermaid
 graph TD
     User([👤 User Input <br> <i>Terminal</i>]) --> History[(📂 Conversation History Buffer)]
