@@ -51,6 +51,7 @@ graph TD
     style Detokenization fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px,color:#000
     style Bot fill:#e8f5e9,stroke:#388e3c,stroke-width:2px,color:#000
 ```
+---
 
 ## ✨ Key Features
 
@@ -85,6 +86,8 @@ open-source-llm-chatbot/
 ├── chatbot_llm.py             # Implementation 2: Modern Causal SmolLM2 Chat Engine
 └── README.md                  # Detailed project documentation
 ```
+---
+
 # 🚀 Local Setup & Execution
 
 ### Prerequisites
@@ -128,9 +131,19 @@ Option B: Run the Legacy Seq2Seq Engine
 ```bash
 python3 chatbot.py
 ```
-👤 Author
-Hamed Payanda
-•	GitHub: @HAMED-PAYANDA
-Completed as part of the IBM AI Developer Program.
+---
 
-📜 License: Distributed under the MIT License. See LICENSE for more information.
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
+
+---
+
+## 👤 Author
+
+**Hamed Payanda**
+* **GitHub:** [@HAMED-PAYANDA](https://github.com/HAMED-PAYANDA)
+* Completed as part of the **IBM AI Developer Program**.
+
+
+
