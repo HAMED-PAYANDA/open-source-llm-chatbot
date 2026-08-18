@@ -77,14 +77,16 @@ graph TD
 
 ## 📁 Repository Structure
 ```text
-open-source-llm-chatbot/
+LLM-Chatbot/
 ├── .theia/
-│   └── settings.json          # IDE workspace configurations
-├── .gitignore                 # Specifies intentionally untracked virtual environments
-├── requirements.txt           # Pinned dependencies for reproducible execution
-├── chatbot.py                 # Implementation 1: Seq2Seq BlenderBot Model
-├── chatbot_llm.py             # Implementation 2: Modern Causal SmolLM2 Chat Engine
-└── README.md                  # Detailed project documentation
+│   └── settings.json          # Cloud IDE environment configurations
+├── .gitignore                 # Specifies intentionally untracked files for Git
+├── chatbot.py                 # Initial Hugging Face LLM chatbot implementation
+├── chatbot_llm.py             # Advanced causal LLM chatbot script
+├── LICENSE                    # MIT License file
+├── README.md                  # Project documentation
+├── requirements.txt           # Python environment dependencies
+└── screenshot3.png            # Visual proof: Chatbot interface and interactions
 ```
 ---
 
